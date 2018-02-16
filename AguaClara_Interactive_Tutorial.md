@@ -1,4 +1,4 @@
-# AguaClara Interactive Tutorial
+Â# AguaClara Interactive Tutorial
 The aim of this interactive tutorial is to get you acclimated to working out of a Markdown, or `.md`, file. Markdown is a markup language with plain text formatting that has a lot of functionality. Some of the benefits of working out of markdown include the ability to write text, create charts, write functioning code in a whole bunch of languages, and render LaTeX equations. Markdown gives you all the functionality of a Jupyter Notebook. Despite this, there isn't a clean way to directly convert a `.ipynb` file to a `.md` file, meaning there's no way to easily convert between the two files.
 
 This tutorial will go over how to write in Markdown, how to code in Python, how to run your code using Hydrogen, and how to use Teletype and GitHub in Atom.
@@ -18,7 +18,7 @@ You can find a GitHub tutorial [here](https://github.com/AguaClara/aguaclara_tut
 
 1. Below this, write a sentence or two about yourself:
 
-<!--- Fill you answer here. --->
+I am objectively terrible at programming, but am an otherwise reasonably intelligent human.
 
 
 
@@ -44,7 +44,7 @@ To signify a header, use `#`. The more `#` you use, the smaller the header gets.
 
 1. Make a header of similar size as Header 3 with whatever text you want:
 
-<!--- Fill you answer here. --->
+### Space Oddity
 
 ## Emphasis
 There are several different ways to emphasize text: *italics*, **bold**, ***combined***, and ~~strikethrough~~.
@@ -56,7 +56,11 @@ There are several different ways to emphasize text: *italics*, **bold**, ***comb
 
 1. Write 4 of your favorite words using each type of emphasis:
 
-<!--- Fill you answer here. --->
+*Objectively*
+**Serendipity**
+***Madness***
+~~Warrior~~
+
 
 
 ## Lists
@@ -68,7 +72,17 @@ Lists are very easy to do. For a bulleted list, use the asterisk and for a numbe
 
 1. Now try it out for yourself. Write down a list of things you hope to achieve this semester, and elaborate on them with sub items:
 
-<!--- Fill you answer here. --->
+* Pass all classes
+  - Without butchering my GPA
+
+
+* Get started on my research project
+  - Start thinking about my thesis
+
+
+* Be useful to my AguaClara Subteam
+* Get 7 hours of sleep every night
+
 
 ## Images
 To input images, you'll either need an image URL or a file path to your image. For AguaClara work, your repository should have a folder for images where you can get an image URL or file path from. In this tutorial, I've made an image folder with a picture in the `aguaclara_tutorial` repository.
@@ -101,7 +115,7 @@ Image with Height and Width Adjusted:
 1. Make an images folder in your personal repository, and import an image of your hometown or pet from that folder. Do it unformatted using the image URL and the relative file path method, then do it again but instead change the height and width of your image:
 
 <!--- Fill you answer here. --->
-
+https://github.com/ananya-gangadhar/personal/blob/master/image/IMG_2069.JPG
 
 
 
@@ -114,7 +128,7 @@ To insert a link, all you have to do is enclose your linked text in `[]` followe
 1. Below, write a sentence describing your major, and insert a link to your major's department website.
 
 <!--- Fill you answer here. --->
-
+The [Environmental Engineering major](https://bee.cals.cornell.edu/) is structured to provide students with appropriate background in the physical, chemical and biological sciences together with the mathematical, planning, analysis and design tools necessary to address complex environmental engineering concerns.
 ## Tables
 Tables in Markdown are slightly harder, but there's an automatic function that allows to you make one easily. When working in a `.md` file, all you have to do is type `table` and hit enter. It will initialize a 2 by 2 table, but you can easily increase the width by going to the last column and hitting `Tab` or it's height by clicking in any cell and hitting `Enter`. Notice in the example how the text below the header is justified left, center, and right. This is due to the line below the header. A line with a colon on the far left of the dashes only indicates left justified, colons on both sides of the dashes indicates centered, and a colon on the far right of the dashes indicates right justified.
 
@@ -144,7 +158,11 @@ When making tables, it's not important that the lines match up. For example, the
 1. Create a table listing your 3 favorite animals, foods, books, and places on campus. Try out the different cell justifications:
 
 <!--- Fill you answer here. --->
-
+| Animals       | Food                          | Books                              | Places On Campus |
+| ------------- | ----------------------------- | ---------------------------------- | ---------------- |
+| Black Panther | Pizza                         | The Count of Monte Cristo          | The Atrium       |
+| Bengal Tiger  | Puliogre                      | Pride and Prejudice                | Physical Sciences Building                 |
+| Penguin       | Double Chocolate Chip Cookies | A Hitchhiker's Guide to the Galaxy |   Hans Bethe House               |
 
 
 ## Code and Syntax Highlighting
@@ -163,11 +181,14 @@ For larger code blocks where you report multiple lines of code, you always start
 1. Below, write a Python print function with a different string using syntax highlighting:
 
 <!--- Fill you answer here. --->
+`print('History is a radioactive spider.')`
 
 2. Now write a block of Python code for that same print statement:
 
 <!--- Fill you answer here. --->
-
+```python
+print('History is a radioactive spider.')
+```
 
 
 ## LaTeX Equations
@@ -178,7 +199,7 @@ $$ Re_D = \frac{uD}{\nu} $$
 1. Try it on your own! Write your favorite equation using LaTeX source code and toggle the LaTeX preview to see it formatted:
 
 <!--- Fill you answer here. --->
-
+$$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 
 # Using Python and Running it With Hydrogen in Markdown
 
@@ -214,14 +235,27 @@ These questions are meant to test what you've learned from the Python Basics tut
 1. Write a conditional statement with 3 conditions: when x is 10, when x is 1, and when x is anything other than 1 or 10. For each condition, have your code print what the value is or isn't.
 
 <!--- Fill you answer here. --->
-
+```python
+if x == 10:
+  print('x is 10')
+elif x == 1:
+    print('x is 1')
+else:
+  print('x is neither 10 nor 1')
+```
 
 
 
 2. Write a `for` loop that takes a variable with an initial value of 0, and adds the current index to the previous value of that variable (i.e. you variable should grow in size every iteration). Perform the iteration 20 times, and have the final value be printed at the end.
 
 <!--- Fill you answer here. --->
+```python
+x = 0
+for i in range(20):
+  x = i
 
+print(x)
+```
 
 
 
@@ -233,7 +267,12 @@ These questions are meant to test what you've learned from the Python Basics tut
 3. Using the NumPy package, calculate the value of sin(4), and use the sigfig function from the utility module in aide_design to get your answer to 3 sig-figs. *(Hint: You will need to import these packages. Remember how to do that?)*
 
 <!--- Fill you answer here. --->
+```python
+from aide_design.play import*
+x = ut.sig()
 
+
+```
 
 
 4. Create a `list` of length 5, and verify the length of your list. Once you've done that, turn your `list` into an `array` and apply units of meters to it. After that, create a 5x5 `array`, extract the middle row and middle column. Verify the size of your 2D `array` and apply units of liters to it.
